@@ -9,7 +9,7 @@
       "ecmaVersion": 2018,
       "sourceType": "module"
     },
-    "import/no-unresolved": "off",
+    "import/no-unresolved": 0,
     "extends": ["airbnb-base"],
     "rules": {
       "no-shadow": "off",
