@@ -9,15 +9,15 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-    template: './src/index.html',
+      template: './src/index.html',
     }),
   ],
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].js'
+    filename: '[name].js',
   },
   optimization: {
-    runtimeChunk: 'single', 
+    runtimeChunk: 'single',
   },
   module: {
     rules: [
@@ -25,10 +25,8 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
-      "import/no-unresolved", [
-        2, 
-        { "caseSensitive": false }
-     ]
+      // 'import/no-unresolved',
+      // [2, { caseSensitive: false }],
     ],
   },
 };
