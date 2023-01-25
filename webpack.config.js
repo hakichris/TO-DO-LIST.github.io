@@ -25,8 +25,6 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
-      // 'import/no-unresolved',
-      // [2, { caseSensitive: false }],
     ],
   },
 };
