@@ -13,12 +13,7 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
-  output: {
-    filename: '[name].js',
-    path: __dirname + '/build',
-    chunkFilename: '[id].[chunkhash].js',
-    publicPath: '/',
-  },
+
   module: {
     rules: [
       {

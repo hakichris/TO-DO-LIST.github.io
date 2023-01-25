@@ -1,9 +1,8 @@
-import _ from 'lodash';
 import './style.css';
 
 const taskslist = [
   { index: '1', description: 'adding element', completed: true },
-  { index: '2', description: 'adding boolean', completed: true },  
+  { index: '2', description: 'adding boolean', completed: true },
 ];
 
 const showAllTasks = (taskslist) => {
@@ -13,7 +12,7 @@ const showAllTasks = (taskslist) => {
     tasks += `<li class="todo-item">
       <input type="checkbox" name="check" id="check" ${task.completed}>
       <input type="text" name="task" id="task" value="${task.description}">
-      </li>`
+      </li>`;
   });
   todoList.innerHTML = tasks;
 };
