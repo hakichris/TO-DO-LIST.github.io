@@ -9,7 +9,6 @@
       "ecmaVersion": 2018,
       "sourceType": "module"
     },
-    "import/no-unresolved": 0,
     "extends": ["airbnb-base"],
     "rules": {
       "no-shadow": "off",
@@ -19,6 +18,15 @@
         "js": "always", "json": "always"
       }]
     },
+
+      "settings": {
+        "import/resolver": {
+          "node": {
+            "paths": ["src"]
+          }
+        }
+      },
+      
     "ignorePatterns": [
       "dist/",
       "build/"
