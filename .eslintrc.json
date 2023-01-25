@@ -18,13 +18,15 @@
       "import/extensions": [ 1, {
         "js": "always", "json": "always"
       }]
+    },   
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".ts", ".tsx"],
+          "moduleDirectory": ["src", "node_modules"]
+        }
+      }
     },
-
-      // "settings": {
-      //   "import/resolver": 
-      //     "webpack"
-      // },
-      
     "ignorePatterns": [
       "dist/",
       "build/"
