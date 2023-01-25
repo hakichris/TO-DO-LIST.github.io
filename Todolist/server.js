@@ -1,4 +1,3 @@
-/* eslint-disable no-unresolved */
 const express = require('express');
 const webpack = require('webpack');
 
