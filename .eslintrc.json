@@ -20,10 +20,10 @@
       }]
     },
 
-      "settings": {
-        "import/resolver": 
-          "webpack"
-      },
+      // "settings": {
+      //   "import/resolver": 
+      //     "webpack"
+      // },
       
     "ignorePatterns": [
       "dist/",
