@@ -21,7 +21,7 @@ const addTask = (newTask) => {
   const task = new Task(newTask, false, index);
   tasksList.push(task);
   LocalStorage.saveData(tasksList);
-  // UI.showAllTasks(tasksList);
+  UI.showAllTasks(tasksList);
 };
 
 const clearInput = () => {
