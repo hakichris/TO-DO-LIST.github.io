@@ -1,19 +1,46 @@
 import './style.css';
+import Task from './task.js';
+import LocalStorage from './localstorage.js';
+import UI from './UI.js';
 
-const taskslist = [
-  { index: '1', description: 'adding element', completed: true },
-  { index: '2', description: 'adding boolean', completed: true },
-];
+let tasksList;
+if (LocalStorage.getData() === null) {
+  tasksList = [];
+} else {
+  tasksList = LocalStorage.getData();
+}
 
-const showAllTasks = (taskslist) => {
-  const todoList = document.querySelector('.todo-list');
-  let tasks = '';
-  taskslist.forEach((task) => {
-    tasks += `<li class="todo-item">
-      <input type="checkbox" name="check" id="check" ${task.completed}>
-      <input type="text" name="task" id="task" value="${task.description}">
-      </li>`;
-  });
-  todoList.innerHTML = tasks;
+const addTask = (newTask) => {
+  let index;
+  if (LocalStorage.getData() === null) {
+    index = 1;
+  } else {
+    tasksList = LocalStorage.getData();
+    index = tasksList.length + 1;
+  }
+  const task = new Task(newTask, false, index);
+  tasksList.push(task);
+  LocalStorage.saveData(tasksList);
+  UI.showAllTasks(tasksList);
 };
-showAllTasks(taskslist);
+
+const clearInput = () => {
+  document.querySelector('#add-new-task').value = '';
+};
+
+const addNewTask = document.querySelector('#add-new-task');
+addNewTask.addEventListener('keyup', (e) => {
+  if (e.keyCode === 13 && addNewTask.value !== '') {
+    const newTask = addNewTask.value;
+    addTask(newTask);
+    clearInput();
+  }
+});
+
+UI.showAllTasks(tasksList);
+
+const btnRefresh = document.querySelector('#btn-refresh');
+btnRefresh.addEventListener('click', () => {
+  window.location.reload();
+  UI.reloadPage();
+});
