@@ -1,4 +1,5 @@
 import LocalStorage from './localstorage.js';
+import Status from './Status.js';
 
 export default class UI {
   static updateIndex(tasksList) {
@@ -69,6 +70,12 @@ export default class UI {
         if (e.keyCode === 13 && task.value !== '') {
           this.editTask(task.value, index, tasksList);
         }
+      });
+    });
+    const checkBoxes = document.querySelectorAll('#check');
+    checkBoxes.forEach((checkBox, index) => {
+      checkBox.addEventListener('change', (e) => {
+        Status.statusChanged(checkBox, index, e.target, tasksList);
       });
     });
   }
