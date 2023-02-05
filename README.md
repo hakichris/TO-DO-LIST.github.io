@@ -62,13 +62,19 @@
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Christian Hakizimana**
 
 - GitHub: [@githubhandle](https://github.com/hakichris)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/hakichris)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Add a link to your deployed project.
+
+- [Live Demo Link](https://hakichris.github.io/TO-DO-LIST.github.io/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
